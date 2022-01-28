@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="navbar">
+        <h1>DojoWeather</h1>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="nav-ul">
+            <button onclick="displayBurbank()" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">Burbank</button>
+            <button onclick="displayChicago()" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">Chicago</button>
+            <button onclick="displayDallas()" onmouseover="addShadow(this)" onmouseout="removeShadow(this)">Dallas</button>
+        </ul>
+    </div>
+    <div id="container">
+        <div id="header">
+            <h2 id="city">Burbank</h2>
+            <div>
+                <span>show temperature in</span>
+                <select name="unit" id="unit" onchange="changeUnit(this)">
+                    <option value="celsius">&deg;C</option>
+                    <option value="fahrenheit">&deg;F</option>
+                    <option value="kelvin">&deg;K</option>
+                </select>
+            </div>
+        </div>
+        <div id="main-content">
+            <div class="panel">
+                <h4>Today</h4>
+                <img src="assets/some_rain.png" alt="some rain">
+                <p class="weather">some rain</p>
+                <div class="temps">
+                    <span class="hottest" id="todayH">24&deg;</span>
+                    <span class="coldest" id="todayC">18&deg;</span>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h4>Tomorrow</h4>
+                <img src="/assets/some_sun.png" alt="some sun">
+                <p class="weather">some sun</p>
+                <div class="temps">
+                    <span class="hottest" id="tomorrowH">27&deg;</span>
+                    <span class="coldest" id="tomorrowC">19&deg;</span>
+                </div>
+            </div>
+            <div class="panel">
+                <h4>Friday</h4>
+                <img src="/assets/some_clouds.png" alt="some clouds">
+                <p class="weather">some clouds</p>
+                <div class="temps">
+                    <span class="hottest" id="fridayH">21&deg;</span>
+                    <span class="coldest" id="fridayC">16&deg;</span>
+                </div>
+            </div>
+            <div class="panel last-panel">
+                <h4>Saturday</h4>
+                <img src="/assets/some_sun.png" alt="some sun">
+                <p class="weather">some sun</p>
+                <div class="temps">
+                    <span class="hottest" id="saturdayH">26&deg;</span>
+                    <span class="coldest" id="saturdayC">21&deg;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cookies">
+        <img src="/assets/cookie.png" alt="cookie">
+        <div id="message">
+            <h5>Stop! Cookie time</h5>
+            <p>We use cookies (sadly not the edible ones) to personalize 
+                content and ads, to provide social media features and to 
+                analyse our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <button id="accept-button" onclick="removeCookiesMessage()">I Accept</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
